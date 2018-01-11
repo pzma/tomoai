@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/singleMessageContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/picturelayout">
+
+            <View
+                android:id="@+id/shim"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="70dp"
+                android:maxWidth="70dp"
+                android:minHeight="70dp"
+                android:minWidth="70dp"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:src="@drawable/petchatface" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/singleMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:background="@drawable/bubble_b"
+            android:paddingLeft="10dip"
+            android:text="Hello bubbles!"
+            android:textColor="#e6e6e6"
+            android:textSize="20sp"
+            android:gravity="top" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

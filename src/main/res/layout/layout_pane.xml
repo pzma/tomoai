@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/drawerPane"
+    android:layout_width="280dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Profile Box -->
+
+    <RelativeLayout
+        android:id="@+id/profileBox"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/material_blue_grey_800"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/petchatface" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/avatar"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOMO"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="4dp"
+                android:text="PET PROFILE"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- List of Actions (pages) -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/profileBox"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/chart1header"
+                    android:layout_width="280dp"
+                    android:paddingLeft="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="Emotional Tones:" />
+            </TableRow>
+
+            <TableRow
+                android:layout_weight="5"
+                android:gravity="center">
+
+                <com.github.mikephil.charting.charts.HorizontalBarChart
+                    android:id="@+id/chart1"
+                    android:layout_width="280dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/chart1header" />
+            </TableRow>
+
+            <TableRow
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/chart2header"
+                    android:layout_width="280dp"
+                    android:paddingLeft="5dp"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chart1"
+                    android:text="Language Tones:" />
+            </TableRow>
+
+            <TableRow
+                android:layout_weight="3"
+                android:gravity="center">
+
+                <com.github.mikephil.charting.charts.HorizontalBarChart
+                    android:id="@+id/chart2"
+                    android:layout_width="280dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/chart2header" />
+            </TableRow>
+
+            <TableRow
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/chart3header"
+                    android:layout_width="280dp"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chart1"
+                    android:paddingLeft="5dp"
+                    android:text="Social Tones:" />
+            </TableRow>
+
+            <TableRow
+                android:layout_weight="5"
+                android:gravity="center">
+
+                <com.github.mikephil.charting.charts.HorizontalBarChart
+                    android:id="@+id/chart3"
+                    android:layout_width="280dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/chart3header" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+</RelativeLayout>

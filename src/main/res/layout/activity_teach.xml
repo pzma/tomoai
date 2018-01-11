@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pzm.petchatbot.TeachActivity">
+
+    <ImageView
+        android:id="@+id/backgroundimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:scaleType="center"
+        android:alpha=".3"
+        android:layout_alignParentTop="true" android:src="@drawable/backgroundbase"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbarchat"
+            layout="@layout/toolbar" />
+
+
+        <FrameLayout
+            android:id="@+id/singleMessageContainerPerson"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="30dp">
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:maxWidth="75dp"
+                android:maxHeight="75dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/mychatface" />
+
+            <EditText
+                android:id="@+id/personTeachText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="85dp"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/bubble_b"
+                android:hint="When I say..."
+                android:gravity="top"
+                android:lines="4"
+                android:maxLength="50"
+                android:maxLines="4"
+                android:textColor="#e6e6e6"
+                android:layout_marginEnd="85dp"
+                android:textSize="20sp" />
+        </FrameLayout>
+
+
+
+        <FrameLayout
+            android:id="@+id/singleMessageContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="30dp">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:maxHeight="75dp"
+                android:maxWidth="75dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/petchatface" />
+
+            <EditText
+                android:id="@+id/botTeachText"
+                android:layout_width="match_parent"
+                android:hint="Tomo will reply..."
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="85dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/bubble_a"
+                android:gravity="top"
+                android:lines="4"
+                android:maxLength="50"
+                android:maxLines="4"
+                android:textColor="#e6e6e6"
+                android:textSize="20sp" />
+
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/buttonTeach"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:layout_width="112dip"
+            android:layout_height="56dip"
+            android:background="@drawable/buttonteach"/>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/drawerPanemain"
+        layout="@layout/layout_pane" />
+
+</android.support.v4.widget.DrawerLayout>

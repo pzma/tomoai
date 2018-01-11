@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
+    tools:context="pzm.petchatbot.ChatActivity">
+
+    <ImageView
+        android:id="@+id/backgroundimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:scaleType="center"
+        android:alpha=".3"
+        android:layout_alignParentTop="true" android:src="@drawable/backgroundbase"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbarchat"
+            layout="@layout/toolbar" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/linerlayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:divider="@null"
+                android:dividerHeight="0dp" />
+
+
+            <LinearLayout
+                android:id="@+id/linerlayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/chatText"
+                    android:layout_width="212dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+
+                <Button
+                    android:id="@+id/buttonVoice"
+                    style="?android:attr/buttonStyleSmall"
+                    android:onClick="voiceInput"
+                    android:singleLine="true"
+                    android:layout_width="80dip"
+                    android:layout_height="40dip"
+                    android:background="@drawable/buttonvoice" />
+
+                <Button
+                    android:id="@+id/buttonSend"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_gravity="right"
+                    android:onClick="sendMessage"
+                    android:singleLine="true"
+                    android:layout_width="80dip"
+                    android:layout_height="40dip"
+                    android:background="@drawable/buttonsend"/>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/drawerPanemain"
+        layout="@layout/layout_pane" />
+</android.support.v4.widget.DrawerLayout>

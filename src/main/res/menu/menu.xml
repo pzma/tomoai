@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/feedback"
+        android:title="Feedback" />
+    <item
+        android:id="@+id/toneHelp"
+        android:title="Tone Info" />
+    <item
+        android:id="@+id/clearData"
+        android:title="Clear All Data"/>
+</menu>
